@@ -1,4 +1,12 @@
-import { Box } from "@mui/material";
+import { Inbox } from "@mui/icons-material";
+import {
+  Box,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+} from "@mui/material";
 import React from "react";
 
 export const Sidebar = () => {
@@ -11,7 +19,16 @@ export const Sidebar = () => {
         display: { xs: "none", sm: "block" },
       }}
     >
-      Sidebar
+      <List>
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <Inbox />
+            </ListItemIcon>
+            <ListItemText primary="Inbox" />
+          </ListItemButton>
+        </ListItem>
+      </List>
     </Box>
   );
 };
