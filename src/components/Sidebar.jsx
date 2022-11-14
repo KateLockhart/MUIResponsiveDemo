@@ -3,7 +3,6 @@ import {
   Article,
   Group,
   Home,
-  Inbox,
   ModeNight,
   Person,
   Settings,
