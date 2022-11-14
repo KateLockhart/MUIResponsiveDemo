@@ -1,4 +1,11 @@
-import { Add as AddIcon } from "@mui/icons-material";
+import {
+  Add as AddIcon,
+  DateRange,
+  EmojiEmotions,
+  Image,
+  PersonAdd,
+  VideoCameraBack,
+} from "@mui/icons-material";
 import {
   Tooltip,
   Fab,
@@ -7,6 +14,10 @@ import {
   Box,
   Typography,
   Avatar,
+  TextField,
+  Stack,
+  ButtonGroup,
+  Button,
 } from "@mui/material";
 import React, { useState } from "react";
 
@@ -55,8 +66,34 @@ function Add() {
               sx={{ width: 30, height: 30 }}
               src="https://images.unsplash.com/photo-1506863530036-1efeddceb993?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1944&q=80"
             />
-            <Typography variant="span">Ava</Typography>
+            <Typography fontWeight={500} variant="span">
+              Ava
+            </Typography>
           </UserBox>
+          <TextField
+            sx={{ width: "100%" }}
+            id="standard-multiline-static"
+            multiline
+            rows={3}
+            placeholder="What's on your mind?"
+            variant="standard"
+          />
+          <Stack direction="row" gap={1} mt={2} mb={3}>
+            <EmojiEmotions color="primary" />
+            <Image color="secondary" />
+            <VideoCameraBack color="success" />
+            <PersonAdd color="error" />
+          </Stack>
+          <ButtonGroup
+            fullWidth
+            variant="contained"
+            aria-label="outlined primary button group"
+          >
+            <Button>Post</Button>
+            <Button sx={{ width: "100px" }}>
+              <DateRange />
+            </Button>
+          </ButtonGroup>
         </Box>
       </StyledModal>
     </>
